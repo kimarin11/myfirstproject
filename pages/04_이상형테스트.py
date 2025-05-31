@@ -57,7 +57,7 @@ else:
         and a.get("Q2") == "연하 🧒"
         and a.get("Q3") == "다정 💗"
     ):
-        img = "https://generated.photos/vue-static/home/face-generator/age-male-before.jpg"
+        img = "https://www.google.com/search?q=%EC%B0%A8%EC%9D%80%EC%9A%B0&sca_esv=5ccc3c2961696a5e&sxsrf=AE3TifP6sLduv99Lj0O2C__IPWDJC164Fg%3A1748670817134&source=hp&ei=YZk6aOCIBumP2roPr4nj0Ag&iflsig=AOw8s4IAAAAAaDqncaN7TkX8ihJKskNrVBV3MvokJnqz&udm=2&oq=&gs_lp=Egdnd3Mtd2l6IgAqAggAMg0QIxjwBRgnGMkCGOoCMg0QIxjwBRgnGMkCGOoCMgcQIxgnGOoCMgoQIxjwBRgnGOoCMgcQIxgnGOoCSPaWGlAAWABwAngAkAEAmAEAoAEAqgEAuAEByAEAmAICoAIKqAIFmAMF8QUkucttWqQ3D_EFolSletpgccuSBwEyoAcAsgcAuAcAwgcDMi0yyAcH&sclient=gws-wiz#vhid=EJlUPQMXwHaGxM&vssid=mosaic"
         desc = """
         🐶 귀엽고 다정한 연하남  
         ☀️ 항상 에너지 넘치고 장난기 많은 스타일  
@@ -68,21 +68,21 @@ else:
         and a.get("Q2") == "연상 👨‍💼"
         and a.get("Q3") == "츤데레 🙃"
     ):
-        img = "https://generated.photos/vue-static/home/face-generator/face2.jpg"
+        img = "https://www.google.com/search?sca_esv=5ccc3c2961696a5e&sxsrf=AE3TifPSM6tMyDln4enab2Nsqif9zMxS3A:1748671381357&q=%EC%9E%A5%ED%95%98%EC%98%A4&udm=2&fbs=AIIjpHyDg0Pef0CibV20xjIa-FRejxCuOmkq074km2sZXr7uq8hqY3b-NkqmHBgKS9xzRFsJd68YxnQqXZ0YI1vLWbx74P-HB5jYNR9ehU8zZhY1pWhcvPw7aR-heDa0orPab1TP0i2_PzHNln7I_ZkijyAwa9m7mTmhgsA81udzFrmej0rKfD-7hH3l1dcilj8zXDAy8Mbhh8FDG-UfB7lwTNeBScjTf3rfgQvkjCJ5K_fbeHn8YSQ&sa=X&ved=2ahUKEwjk347EhM2NAxXqavUHHZG6DrwQtKgLegQIHBAB&biw=1707&bih=944&dpr=1.5#vhid=zXAlw_0-_yHrrM&vssid=mosaic"
         desc = """
         🖤 차가운 듯 다정한 연상 고양이상  
         💼 말보다 행동으로 표현하는 츤데레  
         ☕ 혼자 있어도 멋진, 묘하게 끌리는 사람
         """
     elif a.get("Q5") == "안경 유 🤓" and a.get("Q4") == "무쌍 😌":
-        img = "https://generated.photos/vue-static/home/face-generator/face4.jpg"
+        img = "https://www.google.com/search?q=%EA%B9%80%EC%9D%B4%ED%95%9C+%EC%95%88%EA%B2%BD&sca_esv=5ccc3c2961696a5e&udm=2&biw=1707&bih=944&sxsrf=AE3TifPmST1_AdsS_aC-4HbpXV4ypGDIVQ%3A1748671426657&ei=wps6aKnwJ-TH1e8P8uS82AU&ved=0ahUKEwip2dvZhM2NAxXkY_UHHXIyD1sQ4dUDCBE&uact=5&oq=%EA%B9%80%EC%9D%B4%ED%95%9C+%EC%95%88%EA%B2%BD&gs_lp=EgNpbWciEOq5gOydtO2VnCDslYjqsr1IqxRQ3gZYtRNwAngAkAECmAF_oAHWDaoBBDAuMTW4AQPIAQD4AQGYAgagAuQDqAIFwgIKECMYJxjJAhjqAsICCxAAGIAEGLEDGIMBwgIEEAAYA8ICBRAAGIAEwgIHECMYJxjJAsICCBAAGIAEGLEDmAMDkgcDMi40oAeoMbIHAzAuNLgH3QPCBwcwLjIuMy4xyAcY&sclient=img#vhid=xhqy3y4BPN5nGM&vssid=mosaic"
         desc = """
         📚 문학 감성의 지적인 이상형  
         🎧 조용한 곳에서 음악 들으며 산책하는 걸 좋아해요  
         😌 시선은 차분하지만 마음은 따뜻한 사람
         """
     else:
-        img = "https://generated.photos/vue-static/home/face-generator/face3.jpg"
+        img = "https://www.google.com/search?q=%EA%B9%80%EC%84%A0%EC%9A%B0&sca_esv=5ccc3c2961696a5e&udm=2&biw=1707&bih=944&sxsrf=AE3TifNgkfX-tsamRgylXfSZGQbtt3ofug%3A1748671443139&ei=05s6aJ6eCNbDvr0PmePu4QQ&ved=0ahUKEwje08nhhM2NAxXWoa8BHZmxO0wQ4dUDCBE&uact=5&oq=%EA%B9%80%EC%84%A0%EC%9A%B0&gs_lp=EgNpbWciCeq5gOyEoOyasDIIEAAYgAQYsQMyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDILEAAYgAQYsQMYgwEyBRAAGIAEMgUQABiABDIFEAAYgARIsRNQAFixEnAEeACQAQCYAfgDoAH0DKoBCzAuNy4wLjEuMC4xuAEDyAEA-AEBmAILoAK-C6gCBsICChAjGCcYyQIY6gLCAgQQABgDwgIHECMYJxjJApgDA5IHCTQuNS4wLjEuMaAHuyyyBwkwLjUuMC4xLjG4B7ALwgcFMC4yLjnIBy8&sclient=img#vhid=XyNPxKfV25ttqM&vssid=mosaic"
         desc = """
         🎮 장난도 잘 치고 분위기 메이커  
         😄 대화가 끊기지 않고 항상 웃게 되는 스타일  
