@@ -58,7 +58,7 @@ else:
         and a.get("Q3") == "다정 💗"
     ):
         # 부드럽고 따뜻한 연하 강아지상
-        img = "https://generated.photos/vue-static/home/face-generator/age-male-before.jpg"
+        img = "https://storage.blip.kr/topic/a51b27715cd8f7206dd23f8e9fc923b1.jpg"
         desc = "🐶 귀엽고 다정한 연하남..."
     elif (
         a.get("Q1") == "고양이상 😼"
@@ -66,19 +66,19 @@ else:
         and a.get("Q3") == "츤데레 🙃"
     ):
         # 차가운 연상 고양이상
-        img = "https://generated.photos/vue-static/home/face-generator/face2.jpg"
+        img = "https://storage.blip.kr/topic/a51b27715cd8f7206dd23f8e9fc923b1.jpg"
         desc = "🖤 말보다 눈빛으로 말하는 츤데레형..."
     elif a.get("Q5") == "안경 유 🤓" and a.get("Q4") == "무쌍 😌":
         # 지적이고 부드러운 분위기의 남자
-        img = "https://generated.photos/vue-static/home/face-generator/face4.jpg"
+        img = "https://storage.blip.kr/topic/a51b27715cd8f7206dd23f8e9fc923b1.jpg"
         desc = "📚 책 냄새 좋아하는 문학 감성남..."
     elif a.get("Q6") == "키 큰 👠" and a.get("Q3") == "다정 💗":
         # 따뜻하고 믿음직한 키큰 남자
-        img = "https://generated.photos/vue-static/home/face-generator/face5.jpg"
+        img = "https://storage.blip.kr/topic/a51b27715cd8f7206dd23f8e9fc923b1.jpg"
         desc = "🧸 포옹이 포근한 듬직한 사람..."
     else:
         # 기본형
-        img = "https://generated.photos/vue-static/home/face-generator/face3.jpg"
+        img = "https://storage.blip.kr/topic/a51b27715cd8f7206dd23f8e9fc923b1.jpg"
         desc = "🎮 장난도 잘 치고 분위기 메이커..."
 
 
