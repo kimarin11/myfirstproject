@@ -1,5 +1,5 @@
 plotly
 folium
 koreanize_matplotlib
-streamlit-foliuma
+streamlit-folium
 yfinance
