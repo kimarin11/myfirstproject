@@ -41,7 +41,7 @@ if step <= total:
     if selected != "👈 선택해주세요":
         st.session_state.answers[f"Q{step}"] = selected
         st.session_state.step += 1
-        st.experimental_rerun()
+        st.rerun()
 
 # 결과 단계
 else:
