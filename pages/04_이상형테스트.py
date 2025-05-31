@@ -51,35 +51,36 @@ else:
 
     # AI 생성 얼굴 이미지 링크 (픽션 기반, 공개 라이선스 사용 가능)
     # 사용된 얼굴은 실제 인물이 아니며, 캐릭터 표현용
+    # 예시 조합별 결과 (단 3가지 결과만 보여줬던 걸 개선)
     if (
         a.get("Q1") == "강아지상 🐶"
         and a.get("Q2") == "연하 🧒"
         and a.get("Q3") == "다정 💗"
     ):
+        # 부드럽고 따뜻한 연하 강아지상
         img = "https://generated.photos/vue-static/home/face-generator/age-male-before.jpg"
-        desc = """
-        🐶 귀엽고 따뜻한 분위기의 연하남  
-        🤓 장난기 있지만 누구보다 다정하고 배려심 있는 타입  
-        📚 가끔 책 읽다가 자는 모습이 은근히 설레요
-        """
+        desc = "🐶 귀엽고 다정한 연하남..."
     elif (
         a.get("Q1") == "고양이상 😼"
         and a.get("Q2") == "연상 👨‍💼"
         and a.get("Q3") == "츤데레 🙃"
     ):
+        # 차가운 연상 고양이상
         img = "https://generated.photos/vue-static/home/face-generator/face2.jpg"
-        desc = """
-        🖤 시크한 첫인상, 차분한 말투  
-        🙃 말보다 행동으로 표현하는 츤데레형  
-        ☕ 차 마시며 조용히 같이 있어주는 어른스러운 이상형
-        """
+        desc = "🖤 말보다 눈빛으로 말하는 츤데레형..."
+    elif a.get("Q5") == "안경 유 🤓" and a.get("Q4") == "무쌍 😌":
+        # 지적이고 부드러운 분위기의 남자
+        img = "https://generated.photos/vue-static/home/face-generator/face4.jpg"
+        desc = "📚 책 냄새 좋아하는 문학 감성남..."
+    elif a.get("Q6") == "키 큰 👠" and a.get("Q3") == "다정 💗":
+        # 따뜻하고 믿음직한 키큰 남자
+        img = "https://generated.photos/vue-static/home/face-generator/face5.jpg"
+        desc = "🧸 포옹이 포근한 듬직한 사람..."
     else:
+        # 기본형
         img = "https://generated.photos/vue-static/home/face-generator/face3.jpg"
-        desc = """
-        🎮 장난도 잘 치고 분위기 메이커  
-        😄 대화가 끊기지 않고 항상 웃게 되는 스타일  
-        🎧 "같이 있으면 시간 순삭!" 같은 에너지 넘치는 사람
-        """
+        desc = "🎮 장난도 잘 치고 분위기 메이커..."
+
 
     # 결과 표시
     st.markdown("## 💘 당신에게 어울리는 이상형은 이런 느낌!")
