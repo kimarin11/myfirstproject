@@ -2,16 +2,17 @@ import streamlit as st
 
 st.set_page_config(page_title="이상형 테스트 💘", page_icon="💘", layout="centered")
 
-st.title("💘 나의 이상형 찾기 테스트")
-st.markdown("선택만 하면 바로 넘어가는 자동 진행 테스트예요! 😍")
+st.title("💘 이상형 성향 테스트")
+st.markdown("선택하면 바로 다음 질문으로 넘어가요!\n당신의 취향에 꼭 맞는 이상형을 찾아드릴게요 💖")
 
-# 세션 초기화
-if "step" not in st.session_state:
+# 상태 초기화
+if 'step' not in st.session_state:
     st.session_state.step = 1
     st.session_state.answers = {}
 
-def next_step():
-    st.session_state.step += 1
+def reset():
+    st.session_state.step = 1
+    st.session_state.answers = {}
 
 # 질문 리스트
 questions = [
@@ -23,53 +24,75 @@ questions = [
     ("키 큰 👠", "키 작은 👟")
 ]
 
+# 현재 단계
 step = st.session_state.step
 total = len(questions)
 
+# 질문 단계
 if step <= total:
     q = questions[step - 1]
-    st.markdown(f"### Q{step}. 당신의 취향은?")
-    
-    choice = st.radio("👇 선택하세요", q, key=f"q{step}", on_change=next_step)
-    st.session_state.answers[f"Q{step}"] = choice
+    options = ["👈 선택해주세요"] + list(q)
+    selected = st.selectbox(
+        f"### Q{step}. 당신의 취향은?",
+        options,
+        key=f"select_{step}"
+    )
 
+    if selected != "👈 선택해주세요":
+        st.session_state.answers[f"Q{step}"] = selected
+        st.session_state.step += 1
+        st.experimental_rerun()
+
+# 결과 단계
 else:
     st.success("🎉 테스트 완료!")
-    st.balloons()
+    st.toast("당신에게 어울리는 이상형을 찾는 중... 💘", icon="🔍")
+    st.snow()
 
     a = st.session_state.answers
 
-    # 기본값
-    img = "https://generated.photos/vue-static/home/face-generator/face3.jpg"
-    desc = "🎮 장난도 잘 치고 분위기 메이커\n😄 대화가 끊기지 않고 항상 웃게 되는 스타일\n🎧 '같이 있으면 시간 순삭!' 같은 에너지 넘치는 사람"
-
-    # 커스텀 조건 예시 (더 추가 가능)
+    # 다양한 조건 조합에 따른 결과 (간단 예시)
     if (
         a.get("Q1") == "강아지상 🐶"
         and a.get("Q2") == "연하 🧒"
         and a.get("Q3") == "다정 💗"
     ):
         img = "https://generated.photos/vue-static/home/face-generator/age-male-before.jpg"
-        desc = "🐶 귀엽고 다정한 연하남\n🍬 언제나 붙어있고 싶게 만드는 애교 많은 스타일\n💬 하루 종일 연락해도 지루하지 않아요!"
+        desc = """
+        🐶 귀엽고 다정한 연하남  
+        ☀️ 항상 에너지 넘치고 장난기 많은 스타일  
+        📦 선물보다 마음을 자주 표현하는 타입
+        """
     elif (
         a.get("Q1") == "고양이상 😼"
         and a.get("Q2") == "연상 👨‍💼"
         and a.get("Q3") == "츤데레 🙃"
     ):
         img = "https://generated.photos/vue-static/home/face-generator/face2.jpg"
-        desc = "🖤 첫인상은 시크하지만 알고 보면 따뜻한 츤데레\n☕ 조용한 데이트를 즐기고, 말보단 행동으로 표현해요\n📚 독서와 클래식을 좋아하는 스마트한 남자"
+        desc = """
+        🖤 차가운 듯 다정한 연상 고양이상  
+        💼 말보다 행동으로 표현하는 츤데레  
+        ☕ 혼자 있어도 멋진, 묘하게 끌리는 사람
+        """
     elif a.get("Q5") == "안경 유 🤓" and a.get("Q4") == "무쌍 😌":
         img = "https://generated.photos/vue-static/home/face-generator/face4.jpg"
-        desc = "📘 지적이고 차분한 분위기의 무쌍 안경남\n🎧 인디 음악 듣고 혼자 영화 보는 걸 좋아해요\n👓 무심한 듯 챙겨주는 말에 심쿵!"
-    elif a.get("Q6") == "키 큰 👠" and a.get("Q3") == "다정 💗":
-        img = "https://generated.photos/vue-static/home/face-generator/face5.jpg"
-        desc = "🧸 키 크고 믿음직한 다정남\n🙌 포옹 하나로 모든 걱정을 날려주는 사람\n🍰 카페에서 부드러운 디저트를 같이 나눠 먹는 타입"
+        desc = """
+        📚 문학 감성의 지적인 이상형  
+        🎧 조용한 곳에서 음악 들으며 산책하는 걸 좋아해요  
+        😌 시선은 차분하지만 마음은 따뜻한 사람
+        """
+    else:
+        img = "https://generated.photos/vue-static/home/face-generator/face3.jpg"
+        desc = """
+        🎮 장난도 잘 치고 분위기 메이커  
+        😄 대화가 끊기지 않고 항상 웃게 되는 스타일  
+        🎧 "같이 있으면 시간 순삭!" 같은 에너지 넘치는 사람
+        """
 
-    # 결과 출력
-    st.markdown("## 💘 당신에게 어울리는 이상형은 이런 사람!")
-    st.image(img, caption="✨ AI로 생성된 이상형 이미지", width=250)
+    st.markdown("## 💘 당신에게 어울리는 이상형은 이런 느낌!")
+    st.image(img, width=240, caption="✨ 이상형 이미지 (AI 생성)")
     st.markdown(desc)
+    st.balloons()
 
-    if st.button("🔁 다시 하기"):
-        st.session_state.step = 1
-        st.session_state.answers = {}
+    if st.button("🔄 다시 하기"):
+        reset()
